@@ -1791,6 +1791,27 @@
     .form-card { padding: 28px; }
     .float-1, .float-2, .float-3 { display: none; }
   }
+
+  /* BRING YOUR OWN DISPLAYS SECTION */
+  .byo-row { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; margin-top: 40px; }
+  .byo-content { }
+  .byo-list { list-style: none; padding: 0; margin: 0; }
+  .byo-list li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; font-size: 14px; color: var(--ink); line-height: 1.55; }
+  .byo-list li i { color: var(--accent-dark); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+  .byo-list li strong { font-weight: 600; }
+  .byo-product { background: white; border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 32px; text-align: center; box-shadow: var(--shadow-sm); }
+  .byo-product-img { background: var(--bg-subtle); border-radius: var(--radius-lg); aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; position: relative; border: 1px solid var(--border); }
+  .byo-product-tag { position: absolute; top: 14px; left: 14px; background: white; padding: 5px 11px; border-radius: 50px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink); border: 1px solid var(--border); letter-spacing: 0.5px; }
+  .byo-box-graphic { width: 60%; aspect-ratio: 3 / 2; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); border-radius: 8px; position: relative; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .byo-box-status { position: absolute; bottom: 10px; right: 10px; width: 6px; height: 6px; background: #4ade80; border-radius: 50%; box-shadow: 0 0 10px #4ade80; }
+  .byo-box-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.85); letter-spacing: 2px; font-weight: 600; }
+  .byo-product-name { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 6px; letter-spacing: -0.01em; }
+  .byo-product-desc { font-size: 13px; color: var(--ink-3); margin-bottom: 18px; line-height: 1.5; }
+  .byo-spec-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .byo-spec { background: var(--bg-subtle); padding: 10px 12px; border-radius: var(--radius-sm); text-align: left; }
+  .byo-spec-label { font-size: 10px; color: var(--ink-3); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.4px; margin-bottom: 2px; }
+  .byo-spec-val { font-size: 13px; font-weight: 600; color: var(--ink); }
+  @media (max-width: 800px) { .byo-row { grid-template-columns: 1fr; gap: 32px; } }
 </style>
 </head>
 <body>
@@ -2403,6 +2424,59 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+
+  <section class="s">
+    <div class="container">
+      <div class="s-header">
+        <div class="s-eyebrow">ALREADY HAVE SCREENS?</div>
+        <h2 class="s-title">Use the TVs you already own.<br><span class="muted">We'll make them smart.</span></h2>
+        <p class="s-sub">If your practice already has TVs installed, you don't need to replace them. We add the LG webOS Media Player to your existing screens — turning any HDMI display into a remotely-managed signage endpoint.</p>
+      </div>
+
+      <div class="byo-row">
+        <div class="byo-content">
+          <ul class="byo-list">
+            <li><i class="ti ti-check"></i><span><strong>Plug-and-play.</strong> Connect the LG webOS Media Player via HDMI to any TV — your existing screens become signage-ready instantly.</span></li>
+            <li><i class="ti ti-check"></i><span><strong>Same cloud dashboard.</strong> Manage your hybrid network — old TVs and new LG displays — from one console.</span></li>
+            <li><i class="ti ti-check"></i><span><strong>4K UHD output.</strong> Picture quality matches dedicated LG displays.</span></li>
+            <li><i class="ti ti-check"></i><span><strong>No IT overhead.</strong> We configure, ship, and remote-manage. Your team just plugs it in.</span></li>
+            <li><i class="ti ti-check"></i><span><strong>Future upgrade path.</strong> Start with the box, swap to commercial LG displays when budget allows.</span></li>
+          </ul>
+        </div>
+
+        <div class="byo-product">
+          <div class="byo-product-img">
+            <span class="byo-product-tag">webOS BOX</span>
+            <div class="byo-box-graphic">
+              <div class="byo-box-status"></div>
+              <span class="byo-box-label">LG</span>
+            </div>
+          </div>
+          <div class="byo-product-name">LG webOS Media Player</div>
+          <div class="byo-product-desc">Compact signage player. Turns any HDMI TV into a managed display.</div>
+          <div class="byo-spec-row">
+            <div class="byo-spec">
+              <div class="byo-spec-label">RESOLUTION</div>
+              <div class="byo-spec-val">4K UHD</div>
+            </div>
+            <div class="byo-spec">
+              <div class="byo-spec-label">PLATFORM</div>
+              <div class="byo-spec-val">webOS 6.0</div>
+            </div>
+            <div class="byo-spec">
+              <div class="byo-spec-label">OUTPUT</div>
+              <div class="byo-spec-val">HDMI</div>
+            </div>
+            <div class="byo-spec">
+              <div class="byo-spec-label">MANAGED VIA</div>
+              <div class="byo-spec-val">SuperSign Cloud</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
