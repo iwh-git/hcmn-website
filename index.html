@@ -1623,6 +1623,26 @@
     position: relative; overflow: hidden;
   }
   .sol-visual img { max-width: 78%; max-height: 80%; object-fit: contain; }
+  
+  /* DISPLAY SIZES SECTION */
+  .sizes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  .size-cat-card { background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
+  .size-cat-name { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.01em; }
+  .size-cat-desc { font-size: 12px; color: var(--ink-3); margin-bottom: 16px; line-height: 1.4; }
+  .size-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .size-pill { font-size: 12px; padding: 4px 10px; border-radius: 4px; background: var(--bg-subtle); color: var(--ink); font-family: 'JetBrains Mono', monospace; border: 1px solid var(--border); font-weight: 500; }
+  @media (max-width: 800px) { .sizes-grid { grid-template-columns: 1fr; } }
+
+  /* PLATFORMS COMPARISON GRID */
+  .platforms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+  .platform-card { background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; }
+  .platform-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .platform-header i { font-size: 28px; color: var(--accent-dark); margin-top: 2px; }
+  .platform-name { font-size: 17px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.2; }
+  .platform-mode { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-3); letter-spacing: 0.5px; margin-top: 3px; }
+  .platform-use { font-size: 14px; color: var(--ink-2); line-height: 1.55; margin-bottom: 16px; }
+  @media (max-width: 800px) { .platforms-grid { grid-template-columns: 1fr; } }
+
   .sol-visual-tag {
     position: absolute;
     top: 16px; left: 16px;
@@ -2302,34 +2322,137 @@
     </div>
   </section>
 
+
+  <section class="s">
+    <div class="container">
+      <div class="s-header center">
+        <div class="s-eyebrow">DISPLAY SIZES</div>
+        <h2 class="s-title">From check-in tablets<br>to lobby video walls.</h2>
+        <p class="s-sub">LG's commercial display lineup spans 22" to 110" — letting us match the right screen size and category to each room in your practice.</p>
+      </div>
+
+      <div class="sizes-grid">
+
+        <div class="size-cat-card">
+          <div class="size-cat-name">Standard signage</div>
+          <div class="size-cat-desc">Waiting rooms, exam rooms, lobbies</div>
+          <div class="size-pills">
+            <span class="size-pill">22"</span>
+            <span class="size-pill">32"</span>
+            <span class="size-pill">43"</span>
+            <span class="size-pill">49"</span>
+            <span class="size-pill">55"</span>
+            <span class="size-pill">65"</span>
+            <span class="size-pill">75"</span>
+            <span class="size-pill">86"</span>
+            <span class="size-pill">98"</span>
+            <span class="size-pill">110"</span>
+          </div>
+        </div>
+
+        <div class="size-cat-card">
+          <div class="size-cat-name">Healthcare-grade TVs</div>
+          <div class="size-cat-desc">Patient rooms, interactive TVs</div>
+          <div class="size-pills">
+            <span class="size-pill">32"</span>
+            <span class="size-pill">43"</span>
+            <span class="size-pill">55"</span>
+            <span class="size-pill">65"</span>
+          </div>
+        </div>
+
+        <div class="size-cat-card">
+          <div class="size-cat-name">High-brightness</div>
+          <div class="size-cat-desc">Window-facing displays · 3000+ nits</div>
+          <div class="size-pills">
+            <span class="size-pill">49"</span>
+            <span class="size-pill">55"</span>
+            <span class="size-pill">75"</span>
+          </div>
+        </div>
+
+        <div class="size-cat-card">
+          <div class="size-cat-name">Interactive touch</div>
+          <div class="size-cat-desc">Touchscreen kiosks, check-in stations</div>
+          <div class="size-pills">
+            <span class="size-pill">55"</span>
+            <span class="size-pill">65"</span>
+            <span class="size-pill">75"</span>
+            <span class="size-pill">86"</span>
+          </div>
+        </div>
+
+        <div class="size-cat-card">
+          <div class="size-cat-name">Ultra-stretch</div>
+          <div class="size-cat-desc">Counter strips, ribbon displays</div>
+          <div class="size-pills">
+            <span class="size-pill">29"</span>
+            <span class="size-pill">38"</span>
+            <span class="size-pill">86"</span>
+            <span class="size-pill">88"</span>
+          </div>
+        </div>
+
+        <div class="size-cat-card">
+          <div class="size-cat-name">Video walls</div>
+          <div class="size-cat-desc">Large lobby installations</div>
+          <div class="size-pills">
+            <span class="size-pill">49"</span>
+            <span class="size-pill">55"</span>
+            <span class="size-pill">Configurable</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section class="s" style="background: var(--bg-subtle);">
     <div class="container">
-      <div class="sol-row">
-        <div class="sol-content">
+      <div class="sol-row platforms-row">
+        <div class="sol-content" style="grid-column: 1 / -1;">
           <div class="s-eyebrow">CONTENT MANAGEMENT</div>
-          <h3>Two cloud platforms.<br>One unified management experience.</h3>
-          <p>We manage your full display network from the right LG cloud platform for each use case. SuperSign Cloud powers educational loops and ad displays. Pro:Centric Cloud powers interactive TVs where patients pick their own topics. Both managed centrally — zero IT lift on your end.</p>
-          <ul class="sol-list">
-            <li><i class="ti ti-check"></i> Remote content scheduling and instant updates</li>
-            <li><i class="ti ti-check"></i> Multi-location sync from one dashboard</li>
-            <li><i class="ti ti-check"></i> Real-time performance and uptime monitoring</li>
-            <li><i class="ti ti-check"></i> Failover protection — content keeps playing if internet drops</li>
-            <li><i class="ti ti-check"></i> LG Enhanced Kernel Protection (EKP) security</li>
-          </ul>
-        </div>
-        <div class="sol-visual">
-          <span class="sol-visual-tag">webOS™ 6.0</span>
-          <div style="text-align:center; padding: 40px;">
-            <div style="display:inline-flex; align-items:center; gap:12px; background: white; padding: 12px 18px; border-radius: 10px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); margin-bottom: 16px;">
-              <i class="ti ti-cloud" style="color: var(--primary); font-size: 24px;"></i>
-              <span style="font-weight:600;">SuperSign Cloud</span>
+          <h3>Two cloud platforms.<br>The right one for each use case.</h3>
+          <p>We manage your network through the LG cloud platform purpose-built for each mode — educational loops on SuperSign, interactive TVs on Pro:Centric. Both managed centrally with zero IT lift on your end.</p>
+
+          <div class="platforms-grid">
+
+            <div class="platform-card">
+              <div class="platform-header">
+                <i class="ti ti-cloud" aria-hidden="true"></i>
+                <div>
+                  <div class="platform-name">LG SuperSign Cloud</div>
+                  <div class="platform-mode">MODE 1 · Informational displays</div>
+                </div>
+              </div>
+              <p class="platform-use">Powers educational loops and ad displays in waiting rooms, exam rooms, and lobbies.</p>
+              <ul class="sol-list">
+                <li><i class="ti ti-check"></i> Schedule and sync content across all locations</li>
+                <li><i class="ti ti-check"></i> Specialty playlists with practice branding</li>
+                <li><i class="ti ti-check"></i> Real-time uptime monitoring</li>
+                <li><i class="ti ti-check"></i> Failover protection if internet drops</li>
+              </ul>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 20px;">
-              <div style="padding: 10px; background: white; border: 1px solid var(--border); border-radius: 6px; font-size: 10px; color: var(--ink-3);">Screen 01 <div style="color: var(--accent-dark); font-weight: 600; margin-top: 2px;">● LIVE</div></div>
-              <div style="padding: 10px; background: white; border: 1px solid var(--border); border-radius: 6px; font-size: 10px; color: var(--ink-3);">Screen 02 <div style="color: var(--accent-dark); font-weight: 600; margin-top: 2px;">● LIVE</div></div>
-              <div style="padding: 10px; background: white; border: 1px solid var(--border); border-radius: 6px; font-size: 10px; color: var(--ink-3);">Screen 03 <div style="color: var(--accent-dark); font-weight: 600; margin-top: 2px;">● LIVE</div></div>
+
+            <div class="platform-card">
+              <div class="platform-header">
+                <i class="ti ti-device-tv" aria-hidden="true"></i>
+                <div>
+                  <div class="platform-name">LG Pro:Centric Cloud</div>
+                  <div class="platform-mode">MODE 2 · Interactive TVs</div>
+                </div>
+              </div>
+              <p class="platform-use">Powers interactive TVs where patients pick their own topics with a remote or touchscreen.</p>
+              <ul class="sol-list">
+                <li><i class="ti ti-check"></i> Menu-driven topic selection per device</li>
+                <li><i class="ti ti-check"></i> Per-room content customization</li>
+                <li><i class="ti ti-check"></i> Remote control &amp; touchscreen support</li>
+                <li><i class="ti ti-check"></i> Centralized fleet management</li>
+              </ul>
             </div>
+
           </div>
+        </div>
         </div>
       </div>
 
