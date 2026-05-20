@@ -1812,6 +1812,17 @@
   .byo-spec-label { font-size: 10px; color: var(--ink-3); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.4px; margin-bottom: 2px; }
   .byo-spec-val { font-size: 13px; font-weight: 600; color: var(--ink); }
   @media (max-width: 800px) { .byo-row { grid-template-columns: 1fr; gap: 32px; } }
+
+  /* PRACTICE MARKETING STACK GRID */
+  .stack-visual { background: transparent; padding: 0; align-self: stretch; display: block; }
+  .stack-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; height: 100%; }
+  .stack-card { background: white; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .stack-card:hover { border-color: var(--ink-3); transform: translateY(-1px); }
+  .stack-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .stack-card-header i { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; background: #E6F1FB; color: var(--accent-dark); border-radius: 8px; font-size: 17px; flex-shrink: 0; }
+  .stack-card-name { font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .stack-card-desc { font-size: 12px; color: var(--ink-3); line-height: 1.5; }
+  @media (max-width: 800px) { .stack-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -2545,24 +2556,49 @@
             <li><i class="ti ti-check"></i> Business listings and directory management</li>
           </ul>
         </div>
-        <div class="sol-visual">
-          <span class="sol-visual-tag">GROWTH STACK</span>
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 40px; width: 100%;">
-            <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border); text-align: center;">
-              <i class="ti ti-world" style="color: var(--primary); font-size: 22px;"></i>
-              <div style="font-size: 11px; margin-top: 6px; font-weight: 600;">Website</div>
+        <div class="sol-visual stack-visual">
+          <div class="stack-grid">
+            <div class="stack-card">
+              <div class="stack-card-header">
+                <i class="ti ti-world" aria-hidden="true"></i>
+                <span class="stack-card-name">Website</span>
+              </div>
+              <div class="stack-card-desc">Custom-built sites that convert visitors into patients. Mobile-optimized, fast-loading, HIPAA-aware.</div>
             </div>
-            <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border); text-align: center;">
-              <i class="ti ti-search" style="color: var(--primary); font-size: 22px;"></i>
-              <div style="font-size: 11px; margin-top: 6px; font-weight: 600;">SEO</div>
+            <div class="stack-card">
+              <div class="stack-card-header">
+                <i class="ti ti-search" aria-hidden="true"></i>
+                <span class="stack-card-name">Local SEO</span>
+              </div>
+              <div class="stack-card-desc">Rank when patients search for care near them. Google Business optimization, schema, and local citations.</div>
             </div>
-            <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border); text-align: center;">
-              <i class="ti ti-target" style="color: var(--primary); font-size: 22px;"></i>
-              <div style="font-size: 11px; margin-top: 6px; font-weight: 600;">Google Ads</div>
+            <div class="stack-card">
+              <div class="stack-card-header">
+                <i class="ti ti-target" aria-hidden="true"></i>
+                <span class="stack-card-name">Google Ads</span>
+              </div>
+              <div class="stack-card-desc">Targeted PPC campaigns for high-intent procedures. Track every lead from click to chairside.</div>
             </div>
-            <div style="background: white; padding: 14px; border-radius: 8px; border: 1px solid var(--border); text-align: center;">
-              <i class="ti ti-star" style="color: var(--primary); font-size: 22px;"></i>
-              <div style="font-size: 11px; margin-top: 6px; font-weight: 600;">Reviews</div>
+            <div class="stack-card">
+              <div class="stack-card-header">
+                <i class="ti ti-star" aria-hidden="true"></i>
+                <span class="stack-card-name">Reviews</span>
+              </div>
+              <div class="stack-card-desc">Automated review requests, response management, and reputation monitoring across every platform.</div>
+            </div>
+            <div class="stack-card">
+              <div class="stack-card-header">
+                <i class="ti ti-map-pin" aria-hidden="true"></i>
+                <span class="stack-card-name">Listings</span>
+              </div>
+              <div class="stack-card-desc">Consistent NAP across 70+ directories. One source of truth, automatically synced everywhere.</div>
+            </div>
+            <div class="stack-card">
+              <div class="stack-card-header">
+                <i class="ti ti-chart-bar" aria-hidden="true"></i>
+                <span class="stack-card-name">Reporting</span>
+              </div>
+              <div class="stack-card-desc">Monthly dashboards showing what's working, what's spending, and where new patients came from.</div>
             </div>
           </div>
         </div>
