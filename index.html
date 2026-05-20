@@ -1835,6 +1835,9 @@
   .problem-stat-text { font-size: 13px; color: rgba(255,255,255,0.9); line-height: 1.45; }
   .problem-stat-src { font-size: 9px; color: rgba(255,255,255,0.4); margin-top: 4px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; }
   .problem-stats-footer { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 10px; color: rgba(255,255,255,0.4); font-style: italic; }
+
+  /* 123FormBuilder embed container */
+  .form-embed-card { background: transparent; padding: 0; border: none; box-shadow: none; min-height: 600px; }
 </style>
 </head>
 <body>
@@ -2762,65 +2765,8 @@
   <section class="form-section">
     <div class="container">
       <div class="form-grid">
-        <div class="form-card">
-          <div class="form-row">
-            <div class="form-field">
-              <label>Full name *</label>
-              <input type="text" placeholder="Jane Smith">
-            </div>
-            <div class="form-field">
-              <label>Role / Title</label>
-              <input type="text" placeholder="Practice Manager">
-            </div>
-          </div>
-          <div class="form-field">
-            <label>Practice / Organization *</label>
-            <input type="text" placeholder="Your practice name">
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label>Specialty *</label>
-              <select>
-                <option>Select your specialty...</option>
-                <option>Ophthalmology</option>
-                <option>Dentistry</option>
-                <option>Dermatology</option>
-                <option>Primary Care</option>
-                <option>Pediatrics</option>
-                <option>OB-GYN</option>
-                <option>Urgent Care</option>
-                <option>Physical Therapy</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label>Locations *</label>
-              <select>
-                <option>Select...</option>
-                <option>1 location</option>
-                <option>2–5 locations</option>
-                <option>6–10 locations</option>
-                <option>11+ locations</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label>Email *</label>
-              <input type="email" placeholder="you@practice.com">
-            </div>
-            <div class="form-field">
-              <label>Phone *</label>
-              <input type="tel" placeholder="(555) 555-5555">
-            </div>
-          </div>
-          <div class="form-field">
-            <label>Tell us about your practice</label>
-            <textarea placeholder="What are you looking to achieve?"></textarea>
-          </div>
-          <button class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px;">
-            Request consultation <i class="ti ti-arrow-right"></i>
-          </button>
+        <div class="form-card form-embed-card">
+          <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/6958012.js" data-role="form" data-default-width="800px" data-custom-vars="hasEmbedFormStyle=1&hasTransparentBg=1"></script>
         </div>
 
       </div>
@@ -2839,28 +2785,29 @@
         <p class="footer-brand-text">Patient education and practice marketing for healthcare. Powered by WG Services, an LG Authorized Solution Provider.</p>
       </div>
       <div>
-        <h5>Platform</h5>
+        <h5>Solutions</h5>
         <ul>
-          <li><a onclick="show('solutions')">LG Displays</a></li>
-          <li><a onclick="show('solutions')">Content Library</a></li>
+          <li><a onclick="show('solutions')">LG commercial displays</a></li>
+          <li><a onclick="show('solutions')">LG webOS Media Player</a></li>
           <li><a onclick="show('solutions')">SuperSign Cloud</a></li>
-          <li><a onclick="show('solutions')">Marketing</a></li>
+          <li><a onclick="show('solutions')">Pro:Centric Cloud</a></li>
+          <li><a onclick="show('solutions')">Practice marketing</a></li>
         </ul>
       </div>
       <div>
         <h5>Company</h5>
         <ul>
           <li><a onclick="show('home')">Home</a></li>
-          <li><a onclick="show('case')">Case Study</a></li>
+          <li><a onclick="show('solutions')">Solutions</a></li>
+          <li><a onclick="show('case')">Case study</a></li>
           <li><a onclick="show('contact')">Contact</a></li>
         </ul>
       </div>
       <div>
         <h5>Contact</h5>
         <ul>
-          <li style="color: rgba(255,255,255,0.6); font-size: 14px;">248-786-4422</li>
-          <li style="color: rgba(255,255,255,0.6); font-size: 14px;">info@healthcaremedianetwork.com</li>
-          <li style="color: rgba(255,255,255,0.6); font-size: 14px;">Madison Heights, MI</li>
+          <li style="color: rgba(255,255,255,0.65); font-size: 14px; display: flex; align-items: center; gap: 8px;"><i class="ti ti-mail" style="font-size: 15px; color: rgba(255,255,255,0.5);"></i>info@healthcaremedianetwork.com</li>
+          <li style="color: rgba(255,255,255,0.65); font-size: 14px; display: flex; align-items: center; gap: 8px;"><i class="ti ti-map-pin" style="font-size: 15px; color: rgba(255,255,255,0.5);"></i>Madison Heights, MI</li>
         </ul>
       </div>
     </div>
