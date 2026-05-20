@@ -1823,6 +1823,18 @@
   .stack-card-name { font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
   .stack-card-desc { font-size: 12px; color: var(--ink-3); line-height: 1.5; }
   @media (max-width: 800px) { .stack-grid { grid-template-columns: 1fr; } }
+
+  /* CASE STUDY PROBLEM-SPACE STATS PANEL */
+  .problem-stats { background: #0a1929; border-radius: var(--radius-lg); padding: 32px; color: white; display: flex; flex-direction: column; }
+  .problem-stats-eyebrow { font-size: 10px; color: rgba(94, 234, 212, 0.75); letter-spacing: 1.5px; margin-bottom: 8px; text-transform: uppercase; font-weight: 600; }
+  .problem-stats-title { font-size: 16px; color: white; font-weight: 600; margin-bottom: 20px; letter-spacing: -0.01em; }
+  .problem-stat { display: flex; align-items: baseline; gap: 18px; padding: 16px 0; border-top: 1px solid rgba(255,255,255,0.08); }
+  .problem-stat:first-of-type { border-top: none; padding-top: 4px; }
+  .problem-stat-num { font-size: 32px; font-weight: 700; color: #5eead4; letter-spacing: -0.025em; line-height: 1; flex-shrink: 0; min-width: 95px; }
+  .problem-stat-body { flex: 1; }
+  .problem-stat-text { font-size: 13px; color: rgba(255,255,255,0.9); line-height: 1.45; }
+  .problem-stat-src { font-size: 9px; color: rgba(255,255,255,0.4); margin-top: 4px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; }
+  .problem-stats-footer { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 10px; color: rgba(255,255,255,0.4); font-style: italic; }
 </style>
 </head>
 <body>
@@ -2638,17 +2650,51 @@
           <p>A leading ophthalmology brand needed a way to deliver consistent, expert-reviewed patient education across eye care practices nationwide — without burdening their staff.</p>
           <p>Existing solutions felt dated, generic, or clinically thin. They wanted something premium: visually stunning, clinically credible, and effortless to run.</p>
         </div>
-        <div class="case-mockup" style="margin: 0;">
-          <div class="case-mockup-inner">
-            <div class="case-mockup-logo"></div>
-            <div class="case-mockup-brand">VISION CARE</div>
-            <div class="case-mockup-tag">MEDIA NETWORK</div>
-            <div class="case-mockup-headline">
-              <span class="line">Inform.</span>
-              <span class="line">Educate.</span>
-              <span class="line">Elevate.</span>
+        <div class="problem-stats">
+          <div class="problem-stats-eyebrow">PROBLEM SPACE</div>
+          <div class="problem-stats-title">Why patient education needs a rebuild</div>
+
+          <div class="problem-stat">
+            <div class="problem-stat-num">40-80%</div>
+            <div class="problem-stat-body">
+              <div class="problem-stat-text">of medical info patients receive is forgotten immediately after leaving the office</div>
+              <div class="problem-stat-src">JOURNAL OF THE ROYAL SOCIETY OF MEDICINE</div>
             </div>
           </div>
+
+          <div class="problem-stat">
+            <div class="problem-stat-num">~50%</div>
+            <div class="problem-stat-body">
+              <div class="problem-stat-text">of what patients do remember is recalled incorrectly</div>
+              <div class="problem-stat-src">JOURNAL OF THE ROYAL SOCIETY OF MEDICINE</div>
+            </div>
+          </div>
+
+          <div class="problem-stat">
+            <div class="problem-stat-num">76%</div>
+            <div class="problem-stat-body">
+              <div class="problem-stat-text">increase in patient understanding when visual aids are used vs. verbal instruction alone</div>
+              <div class="problem-stat-src">J. MEDICAL INTERNET RESEARCH</div>
+            </div>
+          </div>
+
+          <div class="problem-stat">
+            <div class="problem-stat-num">87%</div>
+            <div class="problem-stat-body">
+              <div class="problem-stat-text">of patients prefer animated videos over text-only or verbal explanations</div>
+              <div class="problem-stat-src">PATIENT EDUCATION STUDIES</div>
+            </div>
+          </div>
+
+          <div class="problem-stat">
+            <div class="problem-stat-num">19%</div>
+            <div class="problem-stat-body">
+              <div class="problem-stat-text">higher comprehension from animated medical content vs. standard surgical videos</div>
+              <div class="problem-stat-src">MEDICAL ANIMATION RESEARCH</div>
+            </div>
+          </div>
+
+          <div class="problem-stats-footer">Source citations available on request.</div>
         </div>
       </div>
     </div>
@@ -2685,42 +2731,6 @@
           <div class="feature-icon"><i class="ti ti-refresh"></i></div>
           <h4>Continuous updates</h4>
           <p>Monthly content refreshes reflecting current clinical standards and seasonal campaigns.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="s">
-    <div class="container">
-      <div class="s-header center">
-        <div class="s-eyebrow">WHAT IT DELIVERS</div>
-        <h2 class="s-title">Five pillars.<br>One premium platform.</h2>
-      </div>
-      <div class="case-pillars">
-        <div class="case-pillar">
-          <div class="case-pillar-icon"><i class="ti ti-video"></i></div>
-          <h5>Comprehensive Content Library</h5>
-          <p>Cataract, Dry Eye, Glaucoma, Floaters, Premium IOLs and more — continuously updated.</p>
-        </div>
-        <div class="case-pillar">
-          <div class="case-pillar-icon"><i class="ti ti-shield-check"></i></div>
-          <h5>Built for Trust</h5>
-          <p>Expert-reviewed content that reflects the highest standards of care.</p>
-        </div>
-        <div class="case-pillar">
-          <div class="case-pillar-icon"><i class="ti ti-device-desktop"></i></div>
-          <h5>Beautiful. Modern. Effective.</h5>
-          <p>Stunning visuals and animations that patients love to watch.</p>
-        </div>
-        <div class="case-pillar">
-          <div class="case-pillar-icon"><i class="ti ti-chart-bar"></i></div>
-          <h5>Drive Engagement. Drive Growth.</h5>
-          <p>Better educated patients are more engaged, more satisfied, more likely to say yes.</p>
-        </div>
-        <div class="case-pillar">
-          <div class="case-pillar-icon"><i class="ti ti-settings"></i></div>
-          <h5>Easy to Use. Easy to Manage.</h5>
-          <p>Simple to implement. Effortless to update. Built for your team.</p>
         </div>
       </div>
     </div>
