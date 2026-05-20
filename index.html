@@ -594,6 +594,24 @@
   .spec-value { font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
   .spec-value .unit { color: var(--ink-3); font-weight: 500; font-size: 12px; margin-left: 2px; }
 
+  /* TWO MODES SECTION */
+  .modes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+  .mode-card { background: white; border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .mode-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .mode-image-wrap { position: relative; aspect-ratio: 16 / 10; background: var(--bg-subtle); overflow: hidden; }
+  .mode-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .mode-tag { position: absolute; top: 14px; left: 14px; background: rgba(255, 255, 255, 0.97); padding: 5px 11px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.5px; color: var(--ink); box-shadow: var(--shadow-xs); }
+  .mode-body { padding: 28px 28px 28px; }
+  .mode-badge { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent-dark); letter-spacing: 1px; margin-bottom: 10px; font-weight: 600; }
+  .mode-body h3 { font-size: 22px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 12px; }
+  .mode-body > p { font-size: 14px; color: var(--ink-2); line-height: 1.6; margin-bottom: 20px; }
+  .mode-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+  .mode-pill { font-size: 12px; padding: 5px 11px; border-radius: 50px; background: var(--bg-subtle); color: var(--ink-2); border: 1px solid var(--border); }
+  .mode-platform { display: flex; align-items: center; gap: 8px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 13px; color: var(--ink-2); }
+  .mode-platform i { font-size: 17px; color: var(--accent-dark); }
+  .mode-platform-name { font-weight: 600; color: var(--ink); margin-left: 4px; }
+  @media (max-width: 800px) { .modes-grid { grid-template-columns: 1fr; } }
+
   /* FEATURE GRID */
   .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .feature {
@@ -1932,45 +1950,56 @@
     <div class="container">
       <div class="s-header">
         <div class="s-eyebrow">FEATURED HARDWARE</div>
-        <h2 class="s-title">Healthcare-grade displays.<br><span class="muted">Engineered by LG.</span></h2>
+        <h2 class="s-title">Two ways to use a screen.<br><span class="muted">One platform behind both.</span></h2>
+        <p class="s-sub">Deploy LG commercial displays either as informational displays running educational loops in your waiting room and exam rooms, or as interactive TVs where patients pick their topic, product, or service � using a remote or a touchscreen.</p>
       </div>
-      <div class="product-feature">
-        <div class="product-img-wrap">
-          <div class="product-badge">LG Commercial</div>
-          <div class="product-spec-pill">55UH5N-E</div>
-          <img src="https://media.us.lg.com/transform/ecomm-PDPGallery-1100x730/5f3e8a08-f850-4e13-8f80-1bb1474cfae9/MD08005385-D-01?io=transform:fill,width:596" alt="LG 55UH5N-E Commercial Display" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div style=\'width:75%;aspect-ratio:16/10;background:#0A0F1A;border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-family:JetBrains Mono,monospace;font-size:14px;\'>LG 55UH5N-E</div>'">
-        </div>
-        <div class="product-content">
-          <h3>LG UH5N-E Series UHD Signage with webOS™ 6.0</h3>
-          <p>Built for round-the-clock operation in healthcare environments. 4K UHD resolution, 500-nit brightness, conformal-coated power board for dust resistance, and ISO 15408 Common Criteria EAL2 security certification — the same hardware deployed in hospitals, clinics, and specialty practices nationwide.</p>
-          <div class="product-specs">
-            <div class="spec">
-              <div class="spec-label">Resolution</div>
-              <div class="spec-value">3840 × 2160<span class="unit">UHD</span></div>
+
+      <div class="modes-grid">
+
+        <div class="mode-card">
+          <div class="mode-image-wrap">
+            <img src="images/lg-informational.jpg" alt="Healthcare room with wall-mounted LG TV showing educational content" loading="lazy">
+            <span class="mode-tag">MODE 1</span>
+          </div>
+          <div class="mode-body">
+            <div class="mode-badge">INFORMATIONAL DISPLAY</div>
+            <h3>Educational loops, always on.</h3>
+            <p>Pre-programmed video and animation playlists tailored to your specialty. Patients absorb information passively while they wait or during chairside time.</p>
+            <div class="mode-pills">
+              <span class="mode-pill">Auto-playing</span>
+              <span class="mode-pill">Specialty content</span>
+              <span class="mode-pill">Custom branding</span>
+              <span class="mode-pill">Cloud-managed</span>
             </div>
-            <div class="spec">
-              <div class="spec-label">Brightness</div>
-              <div class="spec-value">500<span class="unit">nits</span></div>
-            </div>
-            <div class="spec">
-              <div class="spec-label">Lifetime</div>
-              <div class="spec-value">50,000<span class="unit">hours</span></div>
-            </div>
-            <div class="spec">
-              <div class="spec-label">Sizes</div>
-              <div class="spec-value">43"–65"</div>
-            </div>
-            <div class="spec">
-              <div class="spec-label">Platform</div>
-              <div class="spec-value">webOS<span class="unit">6.0</span></div>
-            </div>
-            <div class="spec">
-              <div class="spec-label">Operation</div>
-              <div class="spec-value">24<span class="unit">/7</span></div>
+            <div class="mode-platform">
+              <i class="ti ti-cloud" aria-hidden="true"></i>
+              Powered by <span class="mode-platform-name">LG SuperSign Cloud</span>
             </div>
           </div>
-          <button class="btn btn-secondary" onclick="show('solutions')">View full lineup <i class="ti ti-arrow-right"></i></button>
         </div>
+
+        <div class="mode-card">
+          <div class="mode-image-wrap">
+            <img src="images/lg-interactive.jpg" alt="LG TV with on-screen interactive menu" loading="lazy">
+            <span class="mode-tag">MODE 2</span>
+          </div>
+          <div class="mode-body">
+            <div class="mode-badge">INTERACTIVE TV</div>
+            <h3>Patients pick what they want to learn.</h3>
+            <p>Menu-driven interface where patients choose topics, treatments, or services. Controlled via remote or touchscreen � turning every screen into a self-serve information kiosk.</p>
+            <div class="mode-pills">
+              <span class="mode-pill">Remote control</span>
+              <span class="mode-pill">Touchscreen</span>
+              <span class="mode-pill">Topic selection</span>
+              <span class="mode-pill">Patient self-serve</span>
+            </div>
+            <div class="mode-platform">
+              <i class="ti ti-device-tv" aria-hidden="true"></i>
+              Powered by <span class="mode-platform-name">LG Pro:Centric Cloud</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
