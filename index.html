@@ -1882,6 +1882,14 @@
   .cat-sizes { display: flex; flex-wrap: wrap; gap: 6px; }
   .cat-size-pill { font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 10px; border-radius: 4px; background: white; border: 1px solid var(--border); color: var(--ink); font-weight: 500; }
   @media (max-width: 800px) { .cat-row, .cat-row.reverse { grid-template-columns: 1fr; gap: 24px; } .cat-row.reverse > .cat-img-wrap { order: 0; } }
+
+  /* KEN BURNS LIFESTYLE SLIDES */
+  .kb-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: kenburns 18s ease-in-out infinite alternate; }
+  @keyframes kenburns { 0% { transform: scale(1.0) translate(0, 0); } 100% { transform: scale(1.12) translate(-2%, -1%); } }
+  .kb-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.55) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: white; }
+  .kb-overlay.center { justify-content: center; align-items: center; text-align: center; background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%); }
+  .kb-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; opacity: 0.85; margin-bottom: 6px; font-weight: 500; }
+  .kb-title { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
 </style>
 </head>
 <body>
@@ -2396,23 +2404,10 @@
             <span class="cat-tag">UHD</span>
             <div class="tv-bezel">
               <div class="tv-screen">
-                <div class="reel">
-                  <div class="slide s1 bg-morning">
-                    <div class="slide-eyebrow">FEEL CARED FOR</div>
-                    <div class="slide-title">Care that listens.</div>
-                  </div>
-                  <div class="slide s2 bg-warmth">
-                    <div class="slide-eyebrow">A MOMENT FOR YOU</div>
-                    <div class="slide-title">Take a breath. You're in good hands.</div>
-                  </div>
-                  <div class="slide s3 bg-trust">
-                    <div class="slide-eyebrow">MEET YOUR TEAM</div>
-                    <div class="slide-title">Trusted clinicians. Personal care.</div>
-                  </div>
-                  <div class="slide s4 bg-connection">
-                    <div class="slide-eyebrow">FEEL SEEN</div>
-                    <div class="slide-title">Your health. Your story.</div>
-                  </div>
+                <img class="kb-image" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=900&q=80" alt="Healthcare professional portrait" loading="lazy">
+                <div class="kb-overlay">
+                  <div class="kb-eyebrow">MEET YOUR CARE TEAM</div>
+                  <div class="kb-title">Trusted clinicians. Personal care.</div>
                 </div>
               </div>
             </div>
@@ -2445,23 +2440,10 @@
             <span class="cat-tag">FHD</span>
             <div class="tv-bezel">
               <div class="tv-screen">
-                <div class="reel">
-                  <div class="slide s1 bg-welcome">
-                    <div class="slide-eyebrow">WELCOME</div>
-                    <div class="slide-title">We're glad you're here.</div>
-                  </div>
-                  <div class="slide s2 bg-wellness">
-                    <div class="slide-eyebrow">WELLNESS</div>
-                    <div class="slide-title">Small steps. Big changes.</div>
-                  </div>
-                  <div class="slide s3 bg-comfort">
-                    <div class="slide-eyebrow">RELAX</div>
-                    <div class="slide-title">Make yourself comfortable.</div>
-                  </div>
-                  <div class="slide s4 bg-community">
-                    <div class="slide-eyebrow">YOUR COMMUNITY</div>
-                    <div class="slide-title">Caring for neighbors since day one.</div>
-                  </div>
+                <img class="kb-image" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=80" alt="Wellness lifestyle" loading="lazy">
+                <div class="kb-overlay center">
+                  <div class="kb-eyebrow">WELLNESS THAT WORKS</div>
+                  <div class="kb-title">Small steps. Big changes.</div>
                 </div>
               </div>
             </div>
@@ -2490,23 +2472,10 @@
             <span class="cat-tag">ULTRA STRETCH</span>
             <div class="tv-bezel stretch">
               <div class="tv-screen">
-                <div class="reel">
-                  <div class="slide s1 bg-new-patients">
-                    <div class="slide-eyebrow">NOW WELCOMING</div>
-                    <div class="slide-title">New patients welcome here.</div>
-                  </div>
-                  <div class="slide s2 bg-wayfind">
-                    <div class="slide-eyebrow">THIS WAY</div>
-                    <div class="slide-title">Your appointment is just ahead →</div>
-                  </div>
-                  <div class="slide s3 bg-same-day">
-                    <div class="slide-eyebrow">SAME DAY CARE</div>
-                    <div class="slide-title">Need to be seen today? Walk in.</div>
-                  </div>
-                  <div class="slide s4 bg-brand">
-                    <div class="slide-eyebrow">YOUR PRACTICE</div>
-                    <div class="slide-title">Health you can trust.</div>
-                  </div>
+                <img class="kb-image" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80" alt="Clean modern reception" loading="lazy">
+                <div class="kb-overlay">
+                  <div class="kb-eyebrow">NOW WELCOMING NEW PATIENTS</div>
+                  <div class="kb-title">Health you can trust.</div>
                 </div>
               </div>
             </div>
